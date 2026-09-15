@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandan Sharma | Mobile Architecture & Full-Stack Lead</title>
+    
+    <!-- Tailwind CSS & Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom Theme Config & Styling -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0d14',
+                        cardBg: '#121723',
+                        accentBlue: '#38bdf8',
+                        accentGreen: '#4ade80',
+                        accentPurple: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(18, 23, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-200 font-sans antialiased min-h-screen">
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-accentBlue/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-accentPurple/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-wider text-white">CS<span class="text-accentBlue">.dev</span></span>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-accentBlue transition-colors">About</a>
+                <a href="#skills" class="hover:text-accentBlue transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accentBlue transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-accentBlue transition-colors">Contact</a>
+            </nav>
+            <a href="mailto:contact@chchandansopra.dev" class="px-4 py-2 text-xs font-semibold text-slate-900 bg-accentBlue rounded-full hover:bg-sky-400 transition-all shadow-md">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="max-w-6xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-accentGreen bg-accentGreen/10 border border-accentGreen/20 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-accentGreen animate-pulse"></span>
+                    Available for Staff & Lead Roles
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Engineering Scalable <br/>
+                    <span class="gradient-text">Mobile & Web Ecosystems</span>
+                </h1>
+                <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+                    Senior Technical Lead specializing in native mobile platforms (Android & iOS), Kotlin Multiplatform (KMP), and modern React web frontends. Passionate about high-performance architecture, hardware-level BLE integrations, and Edge AI.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#projects" class="px-6 py-3 bg-accentBlue text-slate-900 font-semibold rounded-lg hover:bg-sky-400 transition-all flex items-center gap-2">
+                        View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="px-6 py-3 glass-card text-white font-semibold rounded-lg hover:bg-slate-800 transition-all flex items-center gap-2 border border-slate-700">
+                        <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Stats Card -->
+            <div class="lg:col-span-4">
+                <div class="glass-card rounded-2xl p-6 glow-effect space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-accentBlue/10 text-accentBlue rounded-xl">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-white">7+ Years</p>
+                            <p class="text-xs text-slate-400">Industry Experience</p>
+                        </div>
+                    </div>
+                    <hr class="border-slate-800">
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-3 bg-slate-900/50 rounded-lg">
+                            <p class="text-xl font-bold text-accentGreen">Native & KMP</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-wider">Mobile Focus</p>
+                        </div>
+                        <div class="p-3 bg-slate-900/50 rounded-lg">
+                            <p class="text-xl font-bold text-accentPurple">React / Web</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-wider">Frontend Stack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Ecosystem / Skills -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="cpu" class="text-accentBlue"></i> Core Competencies
+        </h2>
+        <p class="text-slate-400 text-sm mb-8">Technologies and frameworks I build with daily</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Mobile Stack -->
+            <div class="glass-card p-6 rounded-xl space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-semibold text-white">Mobile Platforms</h3>
+                    <i data-lucide="smartphone" class="text-accentBlue"></i>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Android (Kotlin)</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Jetpack Compose</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">KMP / CMP</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">iOS (Swift / SwiftUI)</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">BLE & Signal Filtering</span>
+                </div>
+            </div>
+
+            <!-- Web & Frontend -->
+            <div class="glass-card p-6 rounded-xl space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-semibold text-white">Web Frontend</h3>
+                    <i data-lucide="globe" class="text-accentGreen"></i>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">React.js</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">JavaScript / TypeScript</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Tailwind CSS</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Next.js</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">State Management (Redux/Zustand)</span>
+                </div>
+            </div>
+
+            <!-- Architecture & Engineering -->
+            <div class="glass-card p-6 rounded-xl space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="font-semibold text-white">Architecture & DevOps</h3>
+                    <i data-lucide="git-branch" class="text-accentPurple"></i>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Clean Architecture</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">CI/CD Pipelines</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">Edge AI / RAG</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">GIS / Map SDKs</span>
+                    <span class="px-3 py-1 text-xs bg-slate-800 text-slate-300 rounded-md border border-slate-700">REST / GraphQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+            <i data-lucide="code" class="text-accentGreen"></i> Key Projects
+        </h2>
+        <p class="text-slate-400 text-sm mb-8">Selected cross-platform software and enterprise implementations</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="glass-card rounded-xl p-6 hover:border-accentBlue/40 transition-all group">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-semibold text-accentBlue bg-accentBlue/10 px-2.5 py-1 rounded">Mobile / Enterprise</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-accentBlue transition-colors"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Cross-Platform Fleet & Asset Tracking</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                    Designed high-accuracy real-time mapping components and BLE beacon positioning algorithms for enterprise location-aware applications.
+                </p>
+                <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                    <span class="bg-slate-800 px-2 py-1 rounded">Kotlin Multiplatform</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">ArcGIS SDK</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">BLE Kalman Filtering</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card rounded-xl p-6 hover:border-accentPurple/40 transition-all group">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-semibold text-accentPurple bg-accentPurple/10 px-2.5 py-1 rounded">Web / React</span>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-accentPurple transition-colors"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">React Web Analytics Dashboard</h3>
+                <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                    Built a high-throughput, responsive React dashboard showcasing real-time data streams, custom visualizations, and adaptive UI components.
+                </p>
+                <div class="flex flex-wrap gap-2 text-[11px] text-slate-300">
+                    <span class="bg-slate-800 px-2 py-1 rounded">React.js</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">TypeScript</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">Tailwind CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="border-t border-slate-800 mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <p class="text-lg font-bold text-white">Chandan Sharma</p>
+                <p class="text-xs text-slate-400">Technical Lead • Mobile & Full-Stack Architect</p>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://github.com" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="github"></i></a>
+                <a href="https://linkedin.com" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:contact@chchandansopra.dev" class="text-slate-400 hover:text-white transition-colors"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
